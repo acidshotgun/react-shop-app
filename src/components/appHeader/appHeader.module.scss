@@ -1,0 +1,39 @@
+header {
+    height: 95px;
+    background-color: #fff;
+    padding-top: 34px;
+    width: 100%;
+    position: fixed;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1110px;
+        height: 28px;
+        margin: 0 auto;
+        .logo {
+            cursor: pointer;
+        }
+        .list {
+            display: flex;
+            justify-content: space-between;
+            width: 480px;
+            height: 100%;
+            .link {
+                list-style: none;
+                font-size: 15px;
+                font-weight: 700;
+                line-height: 140%;
+                color: black;
+                cursor: pointer;
+            }
+        }
+        .phone {
+            display: flex;
+            width: 165px;
+            justify-content: space-between;
+            p {
+                font-size: 15px;
+            }
+        }
+    }
+}
