@@ -1,5 +1,5 @@
 # Stack
-+ React
++ React.js
 + React-router-dom
 + Axios
 + Scss
