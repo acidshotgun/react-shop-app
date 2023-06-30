@@ -12,17 +12,19 @@ const AppHeader = () => {
                <Link to="/" className={styles.logo}>
                     <img src={logo} alt='logo'></img>
                 </Link>
-                <ul className={styles.list}>
-                    <NavLink className={styles.link} style={({isActive}) => ({color: isActive ? '#6E9C9F' : 'inherit'})} to="/">Главная</NavLink>
-                    <NavLink className={styles.link} style={({isActive}) => ({color: isActive ? '#6E9C9F' : 'inherit'})} to="/shop">Магазин</NavLink>
-                    <NavLink className={styles.link} style={({isActive}) => ({color: isActive ? '#6E9C9F' : 'inherit'})} to="/about">О бренде</NavLink>
-                    <NavLink className={styles.link} style={({isActive}) => ({color: isActive ? '#6E9C9F' : 'inherit'})} to="/contacts">Контакты</NavLink>
-                </ul>
+                <div className={styles.list}>
+                    <NavLink className={({isActive}) => (isActive ? styles.linkActive : styles.link)} to="/">Главная</NavLink>
+                    <NavLink className={({isActive}) => (isActive ? styles.linkActive : styles.link)} to="/shop">Магазин</NavLink>
+                    <NavLink className={({isActive}) => (isActive ? styles.linkActive : styles.link)} to="/about">О бренде</NavLink>
+                    <NavLink className={({isActive}) => (isActive ? styles.linkActive : styles.link)} to="/contacts">Контакты</NavLink>
+                </div>
                 <div className={styles.phone}>
                     <img src={phone} alt='phone'></img>
                     <p>+7 (495) 823-54-12</p>
                 </div>
-                <img src={cart} alt="cart" />
+                <div className={styles.cart}>
+                    <img src={cart} alt="cart" />
+                </div>
             </div>
         </header>
     )

@@ -17,7 +17,7 @@ const App = () => {
 					<Route path="/contacts" element={<Contacts/>}/>
 				</Routes>
 			</main>
-			<AppFooter />
+			{/* <AppFooter /> */}
 		</Router>
 	)
 }
