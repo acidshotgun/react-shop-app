@@ -1,5 +1,9 @@
-.main {
-    padding-top: 120px;
-    margin: 0 auto;
+.app {
+    .main {
+        padding-top: 120px;
+        margin: 0 auto;
+        z-index: -5000;
+        position: relative;
+    }
 }
 
