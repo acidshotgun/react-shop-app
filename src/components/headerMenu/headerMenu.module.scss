@@ -1,0 +1,32 @@
+.header {
+    display: flex;
+    .logo {
+        cursor: pointer;
+    }
+    ul {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 145px;
+        padding: 0;
+        width: 400px;
+        li {
+            list-style: none;
+            cursor: pointer;
+            line-height: 160%;
+            .link {
+                list-style: none;
+                font-size: 15px;
+                font-weight: 400;
+                color: black;
+                cursor: pointer;
+            }
+            .linkActive {
+                font-weight: 700;
+                color: #6E9C9F;
+                list-style: none;
+                font-size: 15px;
+                cursor: pointer;
+            }
+        }
+    }
+}

@@ -4,6 +4,7 @@ header {
     padding-top: 51px;
     width: 100%;
     position: fixed;
+    z-index: 2;
     .container {
         display: flex;
         position: relative;
@@ -11,32 +12,6 @@ header {
         height: 28px;
         margin: 0 auto;
         justify-content: space-between;
-        .logo {
-            cursor: pointer;
-        }
-        .list {
-            display: flex;
-            justify-content: space-between;
-            margin-left: 145px;
-            width: 400px;
-            height: 100%;
-            .link {
-                list-style: none;
-                font-size: 15px;
-                font-weight: 400;
-                line-height: 140%;
-                color: black;
-                cursor: pointer;
-            }
-            .linkActive {
-                font-weight: 700;
-                color: #6E9C9F;
-                list-style: none;
-                font-size: 15px;
-                line-height: 140%;
-                cursor: pointer;
-            }
-        }
         .phone {
             display: flex;
             width: 165px;

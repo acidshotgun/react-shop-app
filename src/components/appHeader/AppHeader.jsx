@@ -1,7 +1,6 @@
-import {Link, NavLink} from 'react-router-dom'
+import HeaderMenu from '../headerMenu/HeaderMenu';
 
 import styles from './appHeader.module.scss';
-import logo from '../../resources/logo.png';
 import phone from '../../resources/icons/call.png';
 import cart from '../../resources/icons/cart.png';
 
@@ -9,15 +8,7 @@ const AppHeader = () => {
     return(
         <header>
             <div className={styles.container}>
-               <Link to="/" className={styles.logo}>
-                    <img src={logo} alt='logo'></img>
-                </Link>
-                <div className={styles.list}>
-                    <NavLink className={({isActive}) => (isActive ? styles.linkActive : styles.link)} to="/">Главная</NavLink>
-                    <NavLink className={({isActive}) => (isActive ? styles.linkActive : styles.link)} to="/shop">Магазин</NavLink>
-                    <NavLink className={({isActive}) => (isActive ? styles.linkActive : styles.link)} to="/about">О бренде</NavLink>
-                    <NavLink className={({isActive}) => (isActive ? styles.linkActive : styles.link)} to="/contacts">Контакты</NavLink>
-                </div>
+                <HeaderMenu/>
                 <div className={styles.phone}>
                     <img src={phone} alt='phone'></img>
                     <p>+7 (495) 823-54-12</p>
