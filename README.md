@@ -3,7 +3,7 @@
 + React-router-dom
 + Axios
 + Scss
-+ Platzi Fake Store API [Link](https://fakeapi.platzi.com/en/rest/introduction)
++ Platzi Fake Store API [Link](https://fakeapi.platzi.com/en/rest/introduction)(Картинки грузит только через ВПН)
 + Макет [Link](https://www.figma.com/file/OFNh7sSivQKwPRV4hBv8Yi/WOMAZING-%2B?type=design&node-id=0-1&mode=design)
 
 <hr>
