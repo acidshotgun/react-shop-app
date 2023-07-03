@@ -5,16 +5,7 @@ import AppFooter from "../appFooter/AppFooter";
 
 import styles from "./app.module.scss";
 
-
-
-
-import {useHttp} from '../../hooks/http.hook';
-
 const App = () => {
-	const {request} = useHttp();
-
-	console.log(request('https://api.escuelajs.co/api/v1/products?limit=3&offset=1'));
-
 	return(
 		<Router>
 			<AppHeader />

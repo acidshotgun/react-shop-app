@@ -1,0 +1,42 @@
+.item {
+    width: 350px;
+    height: 558px;
+    display: flex;
+    flex-direction: column;
+    .image {
+        position: relative;
+        width: 100%;
+        height: 478px;
+        transition: 1s all;
+        cursor: pointer;
+        &:hover {
+            &:before {
+                content: '';
+                position: absolute;
+                display: block;
+                width: 100%;
+                height: 100%;
+                background: rgba(110, 156, 159, 0.64);
+            }
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .name {
+        margin-top: 25px;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 140%;
+    }
+    .price {
+        color: #998E78;
+        text-align: center;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 140%;
+    }
+}
