@@ -1,11 +1,11 @@
 import {useHttp} from '../hooks/http.hook';
 
 const useShopServices = () => {
-    const {request, loading} = useHttp();
+    const {request, loading, error} = useHttp();
 
     const _apiBase = 'https://api.escuelajs.co/api/v1/products?limit=3&offset=1';
 
-    const getProducts = async () => {
+    const getProduct = async () => {
         const res = await request(_apiBase);
         return res.map(item => _transorfProducts(item))
     }
@@ -20,7 +20,7 @@ const useShopServices = () => {
         }
     }
 
-    return {getProducts, loading};
+    return {getProduct, loading, error};
 }
 
 export default useShopServices;

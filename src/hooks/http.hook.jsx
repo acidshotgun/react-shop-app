@@ -3,6 +3,7 @@ import axios from "axios";
 
 export const useHttp = () => {
     const [loading, setLoading] = useState(false)
+    const [error, setError] = useState(null);
 
     const request = async (url) => {
         setLoading(true);
@@ -15,12 +16,13 @@ export const useHttp = () => {
 
             setLoading(false);
             return response.data;
-            
         } catch (error) {
-            throw(error);
+            setLoading(false);
+            setError(error.message);
+            throw error;
         }
     }
 
-    return {request, loading};
+    return {request, loading, error};
 }
 
