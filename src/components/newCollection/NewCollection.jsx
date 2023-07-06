@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import useShopServices from '../../services/ShopServices';
 import { Link } from 'react-router-dom';
 
+import Button from '../button/Button';
 import Subtitle from '../subtitle/Subtitle';
 import CardItem from '../cardItem/CardItem';
 import Spinner from '../spinner/Spinner';
@@ -48,7 +49,7 @@ const NewCollection = () => {
                 {errorMessage}
             </div>
             <Link to='/shop'>
-                <button>Открыть магазин</button>
+                <Button text={'Открыть магазин'}/>
             </Link>
         </div>
     )

@@ -1,22 +1,8 @@
 .container {
     padding-top: 130px;
     .cards {
-        margin-top: 92px;
+        margin: 92px 0 65px 0;
         display: flex;
         justify-content: space-between;
-    }
-    button {
-        display: block;
-        margin: 0 auto;
-        margin-top: 65px;
-        width: 243px;
-        height: 68px;
-        border: 1px solid #6E9C9F;
-        color: #6E9C9F;
-        text-align: center;
-        font-size: 17px;
-        font-weight: 400;
-        line-height: 138.9%;
-        cursor: pointer;
     }
 }

@@ -1,6 +1,9 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper';
+import { Link } from 'react-router-dom';
 import 'swiper/css';
+
+import Button from '../button/Button';
 
 import woman from '../../resources/img/woman_main.png';
 import woman2 from '../../resources/img/woman2.png';
@@ -47,7 +50,9 @@ const Promo = () => {
                             <div className={styles.arrow}>
                                 <img src={arrow} alt='arrow'></img>
                             </div>
-                            <button>Открыть магазин</button>
+                            <Link to='/shop'>
+                                <Button text={'Открыть магазин'}/>
+                            </Link>
                         </div>
                     </div>
                 </div>
