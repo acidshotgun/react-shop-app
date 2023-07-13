@@ -2,31 +2,60 @@ footer {
     width: 100%;
     height: 363px;
     background-color: #F1EADC;
-
+    padding-top: 101px;
     .container {
         margin: 0 auto;
         max-width: 1110px;
-        display: flex;
-        justify-content: space-between;
-
-        .info {
-            width: 615px;
-            height: 25px;
+        .header {
             display: flex;
             justify-content: space-between;
         }
-
-        ul {
-            width: 400px;
+        .email {
             display: flex;
-            justify-content: space-between;
-            .link {
+            justify-content: end;
+        }
+        .info {
+            margin-top: 9px;
+            height: 102px;
+            display: flex;
+            align-items: end;
+            color: #000;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 140%;
+            .rights {
+                height: 66px;
+                display:flex;
+                flex-direction: column;
+                justify-content: space-between;   
+                a {
+                    color:#000;
+                }  
+            }
+            ul {
+                padding: 0;
+                margin-left: 188px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 102px;
                 list-style: none;
-                font-size: 15px;
-                font-weight: 700;
-                line-height: 140%;
-                color: black;
-                cursor: pointer
+                a {
+                    color:#000;
+                }
+            }   
+        }
+        .socials {
+            margin-left: auto;
+            height: 102px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            .links {
+                width: 90px;
+                display: flex;
+                justify-content: space-between;
+                align-items:center;
             }
         }
     }
