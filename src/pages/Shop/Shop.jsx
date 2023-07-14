@@ -1,18 +1,13 @@
-import Subtitle from "../../components/subtitle/Subtitle";
+import TitleSection from '../../components/titleSection/TitleSection';
+import ShopItemList from '../../components/shopItemList/ShopItemList';
 
 import styles from './shop.module.scss';
 
 const Shop = () => {
     return(
         <div className={styles.container}>
-            <div className={styles.main}>
-                <Subtitle text={'Магазин'}/>
-                <div className={styles.path}>
-                    <span>Главная</span>
-                    <span>-</span>
-                    <span>Магазин</span>
-                </div>
-            </div>
+            <TitleSection title={'Магазин'}/>  
+            <ShopItemList/>     
         </div>
     )
 }

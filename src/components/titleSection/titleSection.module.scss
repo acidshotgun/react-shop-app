@@ -1,0 +1,23 @@
+.container {
+    padding-top: 250px;
+    max-width: 1110px;
+    height: 464px;
+    margin: 0 auto;
+    .navigation {
+        display: flex;
+        margin-top: 26px;
+        color: #000;
+        font-size: 17px;
+        font-weight: 500;
+        line-height: 140%;
+        letter-spacing: 0.34px;
+        div {
+            position: relative;
+            top: 12px;
+            width: 12px;
+            height: 1px;
+            background-color: #000;
+            margin: 0 13px 0 13px;
+        }
+    }
+}

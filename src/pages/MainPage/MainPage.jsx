@@ -7,7 +7,6 @@ import cog from './cog1.png';
 import hand from './hand1.png';
 import quality from './quality1.png';
 
-
 //styles
 import styles from './mainPage.module.scss';
 
