@@ -6,17 +6,19 @@ const useShopServices = () => {
     const _apiBase = 'https://api.escuelajs.co/api/v1/'; // Первая часть api
     const _baseOffset = 1;
 
-    const getProduct = async () => {
-        const res = await request(`${_apiBase}products?limit=3&offset=${_baseOffset}`);
-        return res.map(item => _transorfProducts(item))
+    //offset - отступ, limit - кол-во результатов (можно подстроить везде где есть запрос на товары)
+    const getProduct = async (offset = _baseOffset, limit) => {
+        const res = await request(`${_apiBase}products?limit=${limit}&offset=${offset}`);
+        return res.map(item => _transformProducts(item))
     }
 
-    const getSomeProducts = async (offset = _baseOffset) => {
-        const res = await request(`${_apiBase}products?limit=9&offset=${offset}`);
-        return res.map(_transorfProducts)
+    // Запрос по категориям
+    const getCategories = async (offset = _baseOffset, idCategories) => {
+        const res = await request(`${_apiBase}categories/${idCategories}/products?limit=9&offset=${offset}`);
+        return res.map(_transformProducts);
     }
 
-    const _transorfProducts = (products) => {
+    const _transformProducts = (products) => {
         return {
             id: products.id,
             name: products.title,
@@ -26,7 +28,7 @@ const useShopServices = () => {
         }
     }
 
-    return {getProduct, getSomeProducts, loading, error};
+    return {getProduct, getCategories, loading, error};
 }
 
 export default useShopServices;

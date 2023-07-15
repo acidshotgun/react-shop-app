@@ -13,13 +13,15 @@ import styles from './newCollection.module.scss';
 const NewCollection = () => {
     const [items, setItems] = useState([]);
     const {getProduct, loading, error} = useShopServices();
+    const [itemsNumber, setItemsNumber] = useState(3);
+    const [offset, setOffset] = useState(1);
 
     useEffect(() => {
         request()
     }, [])
 
     const request = () => {
-        getProduct()
+        getProduct(offset, itemsNumber)
             .then(result => onProductsLoaded(result))
     }
 

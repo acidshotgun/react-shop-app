@@ -1,5 +1,29 @@
 .container {
+    .buttons {
+        margin-top: 65px;
+        display: flex;
+        .button {
+            padding-left: 65px;
+            padding-right: 65px;
+            margin: 0;
+            margin-right: 10px;
+            width: auto;
+            height: 62px;
+            border: 1px solid black;
+            line-height: 140%;
+            color: #000;
+            background-color: #fff;
+            font-size: 17px;
+            font-weight: 500;
+            line-height: 140%; /* 23.8px */
+            letter-spacing: 0.34px;
+        }
+    }
+    .results {
+        margin-top: 92px;
+    }
     .list {
+        margin-top: 65px;
         display: grid;
         grid-template-columns: repeat(3, 350px);
         grid-template-rows: repeat(3, 558px);
