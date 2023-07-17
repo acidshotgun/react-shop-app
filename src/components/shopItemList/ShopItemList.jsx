@@ -11,11 +11,11 @@ const ShopItemList = () => {
     const [offset, setOffset] = useState(1);
     const [itemsNumber, setItemsNumber] = useState(9);
     const [buttons, setButtons] = useState([
-        {name: 'All', id: 1},
-        {name: 'Clothes', id: 2},
-        {name: 'Shoes', id: 3},
-        {name: 'Electronics', id: 4},
-        {name: 'Others', id: 5}
+        {name: 'All', id: 1, active: true},
+        {name: 'Clothes', id: 2, active: false},
+        {name: 'Shoes', id: 3, active: false},
+        {name: 'Electronics', id: 4, active: false},
+        {name: 'Others', id: 5, active: false}
     ]);
     const {getProduct, getCategories, loading, error} = useShopServices();
 
@@ -23,9 +23,14 @@ const ShopItemList = () => {
         onRequest(offset);
     }, []);
 
-    const onRequest = (offset) => {
-        getProduct(offset, itemsNumber)
+    const onRequest = (offset,) => {
+        if (buttons[0].active === true) {
+            getProduct(offset, itemsNumber)
             .then(result => onProductsLoaded(result));
+        } 
+        // Ориг
+        // getProduct(offset, itemsNumber)
+        // .then(result => onProductsLoaded(result));  
     }
 
     const onProductsLoaded = (data) => {
@@ -53,9 +58,31 @@ const ShopItemList = () => {
         );
     }
 
+    // Метод перебирает массив с объектами кнопок
+    // Срабатывает по клику с id аргументом (это id кнопки)
+    // Когда перебор доходит до нажатого айтема то срабатывает условие и меняется активность на true
+    // Все остальные кнопки возвращаются в стейт с активностью false
+    const changeActive = (id) => {
+        setButtons(buttons => buttons.map(item => {
+            if (item.id === id) {
+                return {...item, active: true}
+            }
+
+            return {...item, active: false}
+        }))
+    }
+
+    // Рендер кнопок
     const buttonsList = buttons.map(item => {
+        const className = item.active ? styles.buttonActive : styles.button;
+
         return(
-            <button key={item.id} className={styles.button}>{item.name}</button>
+            <button 
+                    key={item.id} 
+                    className={className}
+                    onClick={() => changeActive(item.id)}
+                >{item.name}
+            </button>
         )
     }) 
 

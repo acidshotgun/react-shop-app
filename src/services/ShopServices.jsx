@@ -25,6 +25,7 @@ const useShopServices = () => {
             image: products.images[0],
             price: products.price,
             description: products.description,
+            category: products.category.name,
         }
     }
 
